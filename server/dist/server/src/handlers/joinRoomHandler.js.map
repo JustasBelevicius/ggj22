@@ -1,0 +1,1 @@
+{"version":3,"file":"joinRoomHandler.js","sourceRoot":"","sources":["../../../../src/handlers/joinRoomHandler.ts"],"names":[],"mappings":";;AAKA,SAAwB,cAAc,CAAC,OAAwB,EAAE,OAA+B,EAAE,EAAa,EAAE,EAAU;IACvH,MAAM,IAAI,GAAG,OAA4C,CAAC;IAC1D,OAAO,CAAC,GAAG,CAAC,mBAAmB,EAAE,IAAI,CAAC,IAAI,CAAC,CAAC;AAChD,CAAC;AAHD,iCAGC"}
