@@ -24,12 +24,13 @@ const server = (0, express_1.default)()
     .use((req, res) => res.send("OK"))
     .listen(PORT, () => console.log(`Listening on ${PORT}`));
 const wss = new ws_1.Server({ server });
+const connections = {};
 wss.on('connection', (ws, request) => {
     console.log("Client connected!");
     ws.on('close', () => console.log('Client disconnected!'));
     ws.on('message', (data) => {
         const message = JSON.parse(data.toString());
-        (0, messageHandler_1.default)(request, message, ws, db);
+        (0, messageHandler_1.default)(request, message, ws, db, connections);
     });
 });
 //# sourceMappingURL=index.js.map

@@ -1,15 +1,14 @@
 import { Message, LoginRequestPayload, LoginResponsePayload } from '../../../common/src/Message';
 import { MessageType } from '../../../common/src/MessageType';
-import { WebSocket } from 'ws';
-import {IncomingMessage} from 'http';
-import { Client, Pool } from 'pg';
+import { MessageHandlerProperties } from '../models/IMessageHandler';
 
-export default function handleLogin(request: IncomingMessage, payload: LoginRequestPayload, ws: WebSocket, pg: Client) {
+export default function handleLogin({request, payload, ws, db, connections}: MessageHandlerProperties<LoginRequestPayload>) {
     const data = payload as unknown as LoginRequestPayload;
-    pg.query("INSERT INTO player (name, address) VALUES ($1, $2) RETURNING id, name, address",
+    db.query("INSERT INTO player (name, address) VALUES ($1, $2) RETURNING id, name, address",
         [data.name, request.socket.localAddress]).then((value) => {
+            connections[value.rows[0].id] = ws;
             const message: Message<LoginResponsePayload> = {
-                type: MessageType.JOIN_ROOM,
+                type: MessageType.LOGIN,
                 payload: value.rows[0]
             }
             ws.send(JSON.stringify(message));

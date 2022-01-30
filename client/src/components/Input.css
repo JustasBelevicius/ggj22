@@ -1,0 +1,14 @@
+.input {
+    padding: 0 18px;
+    font-size: 16px;
+    color: black;
+    background: lightgray;
+    border: 1px solid lightslategray;
+    border-radius: 4px;
+    height: 36px;
+    margin: 4px 0;
+}
+
+.new-line {
+    display: block;
+}

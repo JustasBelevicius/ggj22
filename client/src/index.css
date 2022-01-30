@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'MoonFlower';
+  src: local('moon-flower'), url(./fonts/moon-flower.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'MoonFlowerBold';
+  src: local('moon-flower-bold'), url(./fonts/moon-flower-bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GiveItYourHeart';
+  src: local('give-it-your-heart'), url(./fonts/give-it-your-heart.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +25,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
 }

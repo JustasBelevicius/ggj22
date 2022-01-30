@@ -3,6 +3,8 @@ import { MessageType } from "common/src/MessageType";
 import { Message, LoginRequestPayload } from "common/src/Message";
 import React, { ChangeEvent, useContext, useState } from "react"
 import { WebSocketContext } from "../WebSocketContext";
+import Button from "../components/Button";
+import Input from "../components/Input";
 
 export default function IndexPage() {
     const [name, setName] = useState<string | undefined>();
@@ -26,7 +28,7 @@ export default function IndexPage() {
     }
 
     return <div>
-        <input type="text" placeholder="User Name" onChange={handleChange}/>
-        <button onClick={clickHandler}>Enter</button>
+        <Input extraClass="new-line" placeholder="User Name" onChange={handleChange} onSubmit={clickHandler}/>
+        <Button extraClass="new-line full-width" onClick={clickHandler} title="Enter"/>
     </div>
 }

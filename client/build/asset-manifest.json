@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ggj-client/static/css/main.19ad7ce9.css",
+    "main.js": "/ggj-client/static/js/main.0f6b61f0.js",
+    "static/js/787.dd93e01f.chunk.js": "/ggj-client/static/js/787.dd93e01f.chunk.js",
+    "static/media/give-it-your-heart.ttf": "/ggj-client/static/media/give-it-your-heart.f55e3dee0ec198d16d15.ttf",
+    "static/media/moon-flower-bold.ttf": "/ggj-client/static/media/moon-flower-bold.1ccea58ac002b9944067.ttf",
+    "static/media/moon-flower.ttf": "/ggj-client/static/media/moon-flower.91e40a2c2f0e43147f4f.ttf",
+    "index.html": "/ggj-client/index.html",
+    "main.19ad7ce9.css.map": "/ggj-client/static/css/main.19ad7ce9.css.map",
+    "main.0f6b61f0.js.map": "/ggj-client/static/js/main.0f6b61f0.js.map",
+    "787.dd93e01f.chunk.js.map": "/ggj-client/static/js/787.dd93e01f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19ad7ce9.css",
+    "static/js/main.0f6b61f0.js"
+  ]
+}
